@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:ZdaszToApp.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
+             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="720"
              Background="#363636"
              x:Class="ZdaszToApp.Views.MenuView">
             
@@ -27,7 +27,7 @@
         
         <Border Grid.Row="0"
                 Background="#805E5E5E"
-                Margin="50,100,50,70"
+                Margin="50,30,50,70"
                 CornerRadius="10">
             
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -72,8 +72,11 @@
                 <Button HorizontalAlignment="Center" 
                         Margin="0,20,0,0"
                         Background="#D3D3D3">
-                    <StackPanel>
-                        <Image Source=""/>  <!-- TODO - Znaleźć grafikę do przycisku "Zakupy" -->
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="../Assets/shop.ico"
+                               Width="40"
+                               Height="40"
+                               Margin="0,0,10,0"/> 
                         <TextBlock Text="Zakupy"
                                    Foreground="#363636"
                                    FontFamily="{StaticResource JerseyFont}"
@@ -84,8 +87,11 @@
                 <Button HorizontalAlignment="Center" 
                         Margin="0,20,0,0"
                         Background="#D3D3D3">
-                    <StackPanel>
-                        <Image Source=""/>  
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="../Assets/test.ico"
+                               Width="30"
+                               Height="30"
+                               Margin="0,0,10,0"/>  
                         <TextBlock Text="Inne testy"
                                    Foreground="#363636"
                                    FontFamily="{StaticResource JerseyFont}"
@@ -97,7 +103,9 @@
                         Margin="0,20,0,0"
                         Background="#D3D3D3">
                     <StackPanel>
-                        <Image Source=""/>  <!-- TODO - Znaleźć grafikę do przycisku "Ranking" -->
+                        <Image Source="../Assets/ranking.ico"
+                               Width="60"
+                               Height="40"/> 
                         <TextBlock Text="Ranking"
                                    Foreground="#363636"
                                    FontFamily="{StaticResource JerseyFont}"
