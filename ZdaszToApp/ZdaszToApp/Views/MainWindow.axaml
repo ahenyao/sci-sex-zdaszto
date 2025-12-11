@@ -5,10 +5,9 @@
         Title="ZdaszTo!"
         Width="360" Height="800">
         
-        <!--<DockPanel>
-        <views:Taskbar DockPanel.Dock="Top"/>
-        <views:MenuView/>
+        <DockPanel>
+                <views:Taskbar DockPanel.Dock="Top"/>
+                <views:MenuView/>
         </DockPanel>
-        -->
-        <views:LoginView></views:LoginView>
+        
 </Window>
