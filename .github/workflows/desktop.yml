@@ -9,26 +9,26 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions\checkout@v4
 
       - name: Setup .NET 9
-        uses: actions/setup-dotnet@v4
+        uses: actions\setup-dotnet@v4
         with:
           dotnet-version: 9.0.304
 
 
       - name: Restore
-        run: dotnet restore ZdaszToApp/ZdaszToApp.Desktop/ZdaszToApp.Desktop.csproj
+        run: dotnet restore ZdaszToApp\ZdaszToApp.Desktop\ZdaszToApp.Desktop.csproj
 
       - name: Build Debug App (x86_64)
         run: |
           dotnet publish \
-            -c Release \
+            -c Debug \
             -f net9.0 \
-            ZdaszToApp/ZdaszToApp.Desktop/ZdaszToApp.Desktop.csproj
+            ZdaszToApp\ZdaszToApp.Desktop\ZdaszToApp.Desktop.csproj
 
       - name: Upload the App
-        uses: actions/upload-artifact@v4
+        uses: actions\upload-artifact@v4
         with:
           name: desktop-debug-apk
-          path: ZdaszToApp/ZdaszToApp.Desktop/bin/Release/net9.0/desktop-x86_64/publish/*.exe
+          path: ZdaszToApp\ZdaszToApp.Desktop\bin\Release\net9.0\desktop-x86_64\publish\*.exe
