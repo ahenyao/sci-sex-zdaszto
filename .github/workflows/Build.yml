@@ -186,7 +186,7 @@ jobs:
         run: dotnet restore ZdaszToApp/ZdaszToApp.Android/ZdaszToApp.Android.csproj
 
       - name: Build
-        run: dotnet publish -c Release -f net9.0-android ZdaszToApp/ZdaszToApp.Android/ZdaszToApp.Android.csproj /p:AndroidSupportedAbis=armeabi-v7a;arm64-v8a;x86;x86_64 /p:AndroidPackageFormat=apk /p:RunAOTCompilation=false /p:PublishTrimmed=false
+        run: dotnet publish -c Release -f net9.0-android ZdaszToApp/ZdaszToApp.Android/ZdaszToApp.Android.csproj /p:AndroidSupportedAbis='armeabi-v7a;arm64-v8a;x86;x86_64' /p:AndroidPackageFormat=apk /p:RunAOTCompilation=false /p:PublishTrimmed=false
 
       - name: Upload
         uses: actions/upload-artifact@v4
